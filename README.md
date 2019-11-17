@@ -1,2 +1,3 @@
-# online-contest
-PHP application for web competition. Solution without SQL DBMS.
+# Online contest
+
+PHP application for web competition. OOP MVC solution without SQL DBMS.

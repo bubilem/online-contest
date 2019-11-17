@@ -1,0 +1,8 @@
+# zakaz pristupu k listingu adresaru
+Options -Indexes 
+
+# zakaz pristupu k json a phtml souborum
+<Files ~ "\.(json|phtml)$">
+   order deny,allow
+   deny from all
+</Files>

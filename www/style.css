@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: #222;
+}
+h1,
+h2,
+h3,
+b,
+strong {
+  font-weight: 400;
+}
+p {
+  padding: 0;
+  margin: 0.25rem;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.3rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  background: #006b8f;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  display: inline-block;
+  transition: background-color 0.3s linear;
+}
+a:hover {
+  background: #00526e;
+}
+main {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+@media (min-width: 600px) {
+  main {
+    width: 600px;
+  }
+}
+header {
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  color: #222;
+  background: #eee;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header > h1 {
+  margin: 0 0 0 1rem;
+  padding: 0;
+  font-size: 1.4rem;
+}
+header > p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+header img {
+  max-height: 60px;
+}
+footer {
+  margin: 0 1rem 1rem 1rem;
+  padding: 0.5rem 1rem;
+  color: #222;
+  background: #eee;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+main > div {
+  margin: 0 1rem 0 1rem;
+  padding: 1rem;
+  background: #444;
+}
+.signed-info {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0 0 0.25rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+p.alert,
+p.success {
+  color: #fff;
+  background: #ddb100;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+p.success {
+  background: #008f00;
+}
+form {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+form > div {
+  width: 100%;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+form > div > label {
+  font-size: 0.9rem;
+  width: 8rem;
+}
+form > div > input {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  color: #4c4a48;
+  background: #fff;
+  border-radius: 0.3rem;
+}
+form > div > input[type="submit"] {
+  padding: 1rem 0.5rem;
+  color: #fff;
+  background: #006b8f;
+  border-radius: 0.2rem;
+  transition: background-color 0.3s linear;
+}
+form > div > input[type="submit"]:hover {
+  background: #00526e;
+  cursor: pointer;
+}
+.questions {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.questions .question {
+  margin: 0.5rem 0;
+  padding: 0;
+  background: #5d5a58;
+  border-radius: 0.25rem;
+}
+.questions > .question > div,
+.questions > .question > a {
+  display: block;
+  margin: 0;
+  padding: 1rem;
+}
+.questions > .question > div {
+  border-radius: 0.25rem;
+}
+.questions > .question > div > p {
+  font-size: 0.8rem;
+}
+.questions .question h2 {
+  margin: 0;
+  padding: 0;
+}
+.questions .question.filled {
+  background: #212121;
+}
+.questions .question.open {
+  background: #0099bc;
+}
+.questions .question.closed {
+  background: #313131;
+}
+.question-detail {
+  margin: 1rem 0;
+}
+.question-detail > div {
+  display: flex;
+  flex-direction: column;
+}
+.question-detail > div > a {
+  margin: 0.5rem 0;
+}
