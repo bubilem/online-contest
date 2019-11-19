@@ -1,39 +1,35 @@
 {
-  "title": "ŠkolaVDF soutěžní hra",
-  "description": "Soutěž ke dni otevřených dveří probíhá od 17. 11. 9.00 do 18. 11. 1.00.",
-  "begin": "2019-11-17 09:00",
-  "end": "2019-11-18 01:00",
+  "title": "ŠkolaVDF SOUTĚŽ",
+  "description": "Soutěž ke dni otevřených dveří. Test probíhá od 18. 11. 17.00 do 20. 11. 14.00. Odpovědi se objeví hned po ukončení soutěže.",
+  "begin": "2019-11-18 17:00",
+  "end": "2019-11-20 14:00",
   "questions": [
     {
-      "code": "A12",
-      "question": "Kolik bitů má jeden bajt?",
-      "answers": ["2", "4", "8"],
+      "code": "hsmwpz",
+      "question": "Kolik kruhů je v logu školy?",
+      "answers": ["3", "4", "5"],
+      "correct": 0
+    },
+    {
+      "code": "914bny",
+      "question": "Jaké barvy se skrývají v základním barevném modelu RGB?",
+      "answers": ["Red Gray Black", "Rot Gelb Blau", "Red Green Blue"],
       "correct": 2
     },
     {
-      "code": "B34",
-      "question": "Čím se zabývá akademie CISCO?",
-      "answers": [
-        "Počítačovými sítěmi",
-        "Vektorovou grafikou",
-        "Divadlem Járy Cimrmana"
-      ],
+      "code": "xp6h3f",
+      "question": "Jaká je univerzální odpověď na základní otázku života, vesmíru a vůbec?",
+      "answers": ["42", "Není známa.", "Bůh ví."],
       "correct": 0
     },
     {
-      "code": "C56",
-      "question": "Co je HTML?",
+      "code": "7q7voo",
+      "question": "Jaký obor naše škola nenabízí.",
       "answers": [
-        "Značkovací jazyk pro web",
-        "Protokol pro přenos webů",
-        "Webová adresa"
+        "Grafický design",
+        "Prodavač partiového zboží",
+        "Informační technologie"
       ],
-      "correct": 0
-    },
-    {
-      "code": "D78",
-      "question": "Vyberte vektorový formát.",
-      "answers": ["JPG", "SVG", "PNG"],
       "correct": 1
     }
   ]

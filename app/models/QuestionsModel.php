@@ -29,7 +29,7 @@ class QuestionsModel extends MainModel
         $this->data['questions'][] = $question;
     }
 
-    public function getQuestion(int $i): QuestionModel
+    public function getQuestion(int $i)
     {
         if (isset($this->getQuestions()[$i])) {
             return $this->getQuestions()[$i];
@@ -42,7 +42,7 @@ class QuestionsModel extends MainModel
         return $this->getQuestions();
     }
 
-    public function getQuestionByCode(string $code): QuestionModel
+    public function getQuestionByCode(string $code)
     {
         foreach ($this->getQuestions() as $question) {
             if ($question->getCode() == $code) {

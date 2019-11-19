@@ -1,36 +1,12 @@
-<h2>Přihlášení</h2>
-<form action="" method="POST">
-    <div>
-        <label for="email-login">Email</label>
-        <input type="email" name="email" id="email-login" maxlength="100" value="" required placeholder="Email">
-    </div>
-    <div>
-        <label for="password-login">Heslo</label>
-        <input type="password" name="password" id="password-login" maxlength="20" value="" required placeholder="Heslo">
-    </div>
-    <div>
-        <input type="submit" name="submit" value="Přihlásit">
+<div class="sign">
+    <h2>Přihlášení</h2>
+    <form action="" method="POST">
+        <div>
+            <input type="email" name="email" maxlength="100" value="" required placeholder="Email">
+            <input type="password" name="password" maxlength="20" value="" required placeholder="Heslo">
+            <input type="submit" name="submit" value="Přihlásit">
+        </div>
         <input type="hidden" name="code" value="{code}">
         <input type="hidden" name="a" value="login">
-    </div>
-</form>
-<h2>Registrace</h2>
-<form action="" method="POST">
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" maxlength="100" value="" required placeholder="Email">
-    </div>
-    <div>
-        <label for="password">Heslo</label>
-        <input type="password" name="password" id="password" maxlength="20" value="" required placeholder="Heslo">
-    </div>
-    <div>
-        <label for="password2">Ověření</label>
-        <input type="password" name="password2" id="password2" maxlength="20" value="" required placeholder="Ověření hesla">
-    </div>
-    <div>
-        <input type="submit" name="submit" value="Registrovat do soutěže">
-        <input type="hidden" name="code" value="{code}">
-        <input type="hidden" name="a" value="register">
-    </div>
-</form>
+    </form>
+</div>

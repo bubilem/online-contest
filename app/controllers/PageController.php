@@ -115,6 +115,7 @@ class PageController
 
     private function login()
     {
+        $questions = (new QuestionsModel(new JsonDataHandler))->load();
         switch (filter_input(INPUT_POST, 'a', FILTER_SANITIZE_STRING)) {
             case 'login':
                 $success = $this->user->sign(
@@ -123,24 +124,37 @@ class PageController
                 );
                 break;
             case 'register':
+                if (isset($_SESSION['r']) || !$questions->isActive()) {
+                    break;
+                }
                 $success = $this->user->register(
                     filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL),
                     filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING),
                     filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_STRING)
                 );
+                if ($success) {
+                    $_SESSION['r'] = 1;
+                }
                 break;
             default:
                 $success = false;
         }
         if (!$success) {
-            $this->user->getMessage()->add("Pro soutěžení musíte být přihlášen.", MessageModel::ALERT);
-            $questions = (new QuestionsModel(new JsonDataHandler))->load();
+            $this->user->getMessage()->add("Pro soutěžení nebo nahlížení na své odpovědi musíte být přihlášen.", MessageModel::ALERT);
+            $content = Template::create('sign');
+            if (!isset($_SESSION['r'])) {
+                if ($questions->isActive()) {
+                    $content .= Template::create('register');
+                } else {
+                    $this->user->getMessage()->add("Není možné se registrovat, pokud není aktivní soutěž.", MessageModel::ALERT);
+                }
+            }
             $this->page->setData([
                 'title' => 'ŠkolaVDF',
                 'caption' => $questions->getTitle(),
                 'description' => $questions->getDescription(),
                 'message' => $this->user->getMessage(),
-                'content' => Template::create('sign')
+                'content' => $content
             ]);
         }
     }
