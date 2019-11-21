@@ -24,6 +24,9 @@ class PageController
         }
         if ($this->user->getSigned()) {
             switch (filter_input(INPUT_GET, 'a')) {
+                case 's':
+                    $this->score();
+                    break;
                 case 'o':
                     if (!filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING)) {
                         $this->user->clear();
@@ -44,6 +47,24 @@ class PageController
             $this->page->setData('signedInfo', new Template('signedInfo', ['email' => $this->user->getEmail()]));
         }
         echo $this->page;
+    }
+
+    private function score()
+    {
+        $content = '';
+        foreach ((new ScoreModel())->getPlayers() as $email => $score) {
+            $content .= new Template('scoreListItem', [
+                'email' => UserModel::hideEmail($email),
+                'score' => $score
+            ]);
+        }
+        $this->page->setData([
+            'title' => 'ŠkolaVDF',
+            'caption' => $this->user->getQuestions()->getTitle(),
+            'description' => $this->user->getQuestions()->getDescription(),
+            'message' => $this->user->getMessage(),
+            'content' => new Template('scoreList', ['content' => $content])
+        ]);
     }
 
     private function answer(string $code)

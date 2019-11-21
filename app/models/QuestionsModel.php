@@ -93,4 +93,15 @@ class QuestionsModel extends MainModel
         }
         return $data;
     }
+
+    public function getScore(): int
+    {
+        $score = 0;
+        foreach ($this->getQuestions() as $question) {
+            if ($question->getState() == QuestionModel::STATE_FILLED && $question->getSelected() == $question->getCorrect()) {
+                $score++;
+            }
+        }
+        return $score;
+    }
 }

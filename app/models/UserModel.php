@@ -96,4 +96,22 @@ class UserModel extends MainModel
     {
         return !empty($_SESSION[self::SESSION_NAME]);
     }
+
+    public static function hideEmail($email)
+    {
+        $parts = explode('@', $email);
+        if (!is_array($parts) || count($parts) != 2) {
+            return 'error@mail';
+        }
+        if (strlen($parts[0]) > 2) {
+            for ($i = 0; $i < strlen($parts[0]); $i++) {
+                if ($i > 0 && $i < strlen($parts[0]) - 1) {
+                    $parts[0][$i] = '*';
+                }
+            }
+        } else {
+            $parts[0] = (isset($parts[0][0]) ? $parts[0][0] : '*') . '*' . (isset($parts[0][1]) ? $parts[0][1] : '*');
+        }
+        return $parts[0] . '@' . $parts[1];
+    }
 }

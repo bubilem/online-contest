@@ -93,7 +93,7 @@ class Template
                         $tag = '';
                         break;
                     case $tagBeginEndSymbols[1]:
-                        if (!empty($this->data[$tag])) {
+                        if (isset($this->data[$tag])) {
                             $str .= $this->data[$tag];
                         }
                         $inData = false;
