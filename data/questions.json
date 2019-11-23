@@ -1,36 +1,38 @@
 {
   "title": "ŠkolaVDF SOUTĚŽ",
-  "description": "Soutěž ke dni otevřených dveří. Test probíhá od 18. 11. 17.00 do 20. 11. 14.00. Odpovědi se objeví hned po ukončení soutěže.",
-  "begin": "2019-11-18 17:00",
-  "end": "2019-11-20 14:00",
+  "description": "Soutěž ke dni otevřených dveří na VOŠ, SPŠ a SOŠ Varnsdorf. Z nejúspěšnějších hráčů budou vylosování tři, kteří obdrží zajímavé ceny. Informace o výhře bude zaslána na uvedený email. Hra probíhá 22. 11. od 9.00 do 15.30. V případě dotazů se ptejte v učebně 04 :-)",
+  "begin": "2019-11-22 09:00",
+  "end": "2019-11-22 15:30",
   "questions": [
     {
-      "code": "hsmwpz",
-      "question": "Kolik kruhů je v logu školy?",
-      "answers": ["3", "4", "5"],
+      "code": "1179827f94",
+      "question": "Jaký nový předmět se zavádí do výuky v oboru Informační technologie?",
+      "answers": ["Kybernetika", "Počítačové hry", "Webové aplikace"],
       "correct": 0
     },
     {
-      "code": "914bny",
-      "question": "Jaké barvy se skrývají v základním barevném modelu RGB?",
-      "answers": ["Red Gray Black", "Rot Gelb Blau", "Red Green Blue"],
+      "code": "222d6803eb",
+      "question": "Pod jakou zkratkou můžeme najít procesor počítače?",
+      "answers": ["IP", "PCI", "CPU"],
       "correct": 2
     },
     {
-      "code": "xp6h3f",
-      "question": "Jaká je univerzální odpověď na základní otázku života, vesmíru a vůbec?",
-      "answers": ["42", "Není známa.", "Bůh ví."],
-      "correct": 0
+      "code": "3254322c93",
+      "question": "Jaký vzorec odpovídá Ohmovu zákonu pojmenovaného dle německého fyzika Georga Simona Ohma?",
+      "answers": ["R=I/U", "R=U/I", "R=U*I"],
+      "correct": 1
     },
     {
-      "code": "7q7voo",
-      "question": "Jaký obor naše škola nenabízí.",
-      "answers": [
-        "Grafický design",
-        "Prodavač partiového zboží",
-        "Informační technologie"
-      ],
+      "code": "455cb67793",
+      "question": "Který malíř si uřízl ucho?",
+      "answers": ["Stanislav Honzík", "Vincent van Gogh", "Pablo Picasso"],
       "correct": 1
+    },
+    {
+      "code": "56097075ec",
+      "question": "Ve kterém městě najdeme Tančící dům (Ginger and Fred)?",
+      "answers": ["Paříž", "Benátky", "Praha"],
+      "correct": 2
     }
   ]
 }

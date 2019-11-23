@@ -94,7 +94,7 @@ class QuestionsModel extends MainModel
         return $data;
     }
 
-    public function getScore(): int
+    public function getScore()
     {
         $score = 0;
         foreach ($this->getQuestions() as $question) {

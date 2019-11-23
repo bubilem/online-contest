@@ -55,7 +55,7 @@ class PageController
         foreach ((new ScoreModel())->getPlayers() as $email => $score) {
             $content .= new Template('scoreListItem', [
                 'email' => UserModel::hideEmail($email),
-                'score' => $score
+                'score' => $this->user->getQuestions()->isClosed() ? $score : '-'
             ]);
         }
         $this->page->setData([
